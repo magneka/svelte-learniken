@@ -1,0 +1,32 @@
+Sjekk ut prosjekt
+
+Lag folder src\layout
+lag filene
+  - App.svelte
+  - Content.svelte
+  - Footer.svelte
+  - HeaderMenu.svelte
+  - Logo.svelte
+
+se i filen main.js
+den peker på App
+Vi skal nå importere App fra ./layout/App.svelte
+
+Logo svelte
+<img src="learniken.png" height="60px" />
+
+Footer svelte
+<span>
+    (C) Learnikken - Ulriken Consulting
+</span> 
+
+<style>
+    span {
+        font-size: 12px;                
+    }
+</style>
+
+HeaderMenu.svelte
+bruk snippet headermenu_initial
+
+

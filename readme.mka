@@ -1,0 +1,62 @@
+---------------------------------------------------
+:npx degit sveltejs/template svelte-app
+---------------------------------------------------
+Need to install the following packages:
+  degit@2.8.4
+Ok to proceed? (y) 
+> cloned sveltejs/template#HEAD to svelte-app
+
+---------------------------------------------------
+:cd svelte-app 
+---------------------------------------------------
+magnealvheim@Magne-sin-Mac-mini svelte-app % ls
+README.md		public			scripts
+package.json		rollup.config.js	src
+
+---------------------------------------------------
+:npm install
+---------------------------------------------------
+
+added 84 packages, and audited 85 packages in 7s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+---------------------------------------------------
+:npm run dev
+---------------------------------------------------
+
+> svelte-app@1.0.0 dev
+> rollup -c -w
+
+rollup v3.29.4
+bundles src/main.js → public/build/bundle.js...
+LiveReload enabled
+created public/build/bundle.js in 126ms
+
+[2023-09-29 15:40:21] waiting for changes...
+
+> svelte-app@1.0.0 start
+> sirv public --no-clear --dev
+
+
+  Your application is ready~! 🚀
+
+  - Local:      http://localhost:8080
+  - Network:    Add `--host` to expose
+
+────────────────── LOGS ──────────────────
+
+  [15:40:34] 200 ─ 5.44ms ─ /
+  [15:40:34] 200 ─ 1.01ms ─ /global.css
+  [15:40:34] 200 ─ 1.48ms ─ /build/bundle.css
+  [15:40:34] 200 ─ 1.42ms ─ /build/bundle.js
+  [15:40:34] 200 ─ 1.91ms ─ /favicon.png
+
+
+---------------------------------------------------
+:code .
+---------------------------------------------------
+
