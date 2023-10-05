@@ -1,0 +1,329 @@
+{
+	// Place your svelte-app workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	  
+
+	"route_to": {
+		"prefix": "route_to",
+		"description": "route_to",
+		"body": [
+		  "<Route path=\"/$1\" component={$2} />"
+		]
+	  }
+
+	"headermenu_initial": {
+		"prefix": "headermenu_initial",
+		"description": "headermenu_initial",
+		"body": [
+		  "<script>",
+		  "    import { Router, Link } from \"svelte-routing\";",
+		  "</script>",
+		  "",
+		  "<Router>",
+		  "    <div class=\"wrapper\">",
+		  "        <Link to=\"/\">Home</Link>               ",
+		  "    </div>",
+		  "</Router>",
+		  "",
+		  "<style>",
+		  "    ",
+		  "    .wrapper {        ",
+		  "        padding-top: 18px;        ",
+		  "    }",
+		  "",
+		  "    :global(a) {",
+		  "        color: white;",
+		  "        font-size: 25px;",
+		  "        text-decoration: none;",
+		  "        padding-right: 6px;",
+		  "    }",
+		  "",
+		  "    :global(a:hover) {",
+		  "        color: white;",
+		  "        font-size: 25px;",
+		  "        text-decoration: underline;",
+		  "    }",
+		  "    ",
+		  "</style>"
+		]
+	  },
+	  
+
+	"content_initial": {
+		"prefix": "content_initial",
+		"description": "content_initial",
+		"body": [
+		  "<script>",		  
+		  "    import { Route, Router, Link } from \"svelte-routing\";",
+		  "    let url = \"/\";",
+		  "    let path = location.pathname;",
+		  "</script>",
+		  "",
+		  "<Router {url}>",
+		  "    <div>",
+		  "    </div>",
+		  "</Router>"
+		]
+	  },
+
+	"app_svelte_styling": {
+		"prefix": "app_svelte_styling",
+		"description": "app_svelte_styling",
+		"body": [
+			"<style>",
+			"    .grid_layout {",
+			"        display: grid;",
+			"        grid-gap: 10px;",
+			"        grid-template-columns: 300px auto;",
+			"        grid-template-rows: 90px auto 60px;",
+			"        grid-template-areas:",
+			"            \"logo header\"",
+			"            \"sidebar content\"",
+			"            \"footer  footer\";",
+			"        background-color: rgb(75, 0, 90);",
+			"        color: white;",
+			"        font-size: 16px;",
+			"        font-family: \"Roboto\", sans-serif;",
+			"        height: 100vh;",
+			"        width: 100vw;",
+			"        min-width: 1366px;",
+			"    }",
+			"",
+			"    .box {",
+			"        border-radius: 0px;",
+			"        padding: 10px;",
+			"        font-size: 150%;",
+			"    }",
+			"",
+			"    .logo {",
+			"        grid-area: logo;",
+			"    }",
+			"",
+			"    .sidebar {",
+			"        grid-area: sidebar;",
+			"    }",
+			"",
+			"    .content {",
+			"        grid-area: content;",
+			"    }",
+			"",
+			"    .header {",
+			"        grid-area: header;",
+			"    }",
+			"",
+			"    .footer {",
+			"        grid-area: footer;",
+			"    }",
+			"</style>",
+			""
+		  ]
+	  },
+	  "home_svelte": {
+		"prefix": "home_svelte",
+		"description": "home_svelte",
+		"body": [
+		  "<h1>Learniken ser på svelte</h1>",
+		  "<h2>Hva skal vi lage</h2>",
+		  "<p>",
+		  "    I dag hopper vi rett på dypt vann og lager en SPA applikasjon, med følgende",
+		  "    elementer",
+		  "</p>",
+		  "",
+		  "<ul>",
+		  "    <li>Styling</li>",
+		  "    <li>Routing</li>",
+		  "    <li>App meny</li>",
+		  "    <li>Komponenter</li>",
+		  "    <li>Lokal state</li>",
+		  "    <li>Global state</li>",
+		  "    <li>Rest-api kall</li>",
+		  "</ul>",
+		  "",
+		  "<p>",
+		  "    Klikker du på denne linken ",
+		  "    <a href=\"https://svelte.dev/examples/hello-world\" target=\"new\">\"https://svelte.dev/examples\"</a>",
+		  "    kan du finne eksempler",
+		  "</p>",
+		  ""
+		]
+	  },
+	  "input_bind": {
+		"prefix": "input_bind",
+		"description": "input_bind",
+		"body": [
+		  "<input type=\"$1\" bind:value={$2} />",
+		  ""
+		]
+	  },
+	  "button_click": {
+		"prefix": "button_click",
+		"description": "button_click",
+		"body": [
+		  "<button on:click={$1}>$2</button>"
+		]
+	  },
+	  "count_subscribe": {
+		"prefix": "count_subscribe",
+		"description": "count_subscribe",
+		"body": [
+		  "count.subscribe(value => count_value = value)"
+		]
+	  },
+	  "globalcount_buttons": {
+		"prefix": "globalcount_buttons",
+		"description": "globalcount_buttons",
+		"body": [
+		  "<script>",
+		  "	import {count} from \"../../stores/counter.js\";",
+		  "",
+		  "	function increment() {",
+		  "		count.update((n) => n + 1);",
+		  "	}",
+		  "</script>",
+		  "",
+		  "<button on:click={increment}>Øk med en</button>",
+		  "Decrement",
+		  "Clear"
+		]
+	  },
+	  "continent_comp": {
+		"prefix": "continent_comp",
+		"description": "continent_comp",
+		"body": [
+		  "<script>",
+		  "  // create a prop continent",
+		  "</script>",
+		  "",
+		  "<h1>{continent.name}</h1>",
+		  "",
+		  "<style>",
+		  "  h1 {",
+		  "    font-size: 1.4em;",
+		  "    margin: 0;",
+		  "    display: block;",
+		  "  }",
+		  "</style>",
+		  ""
+		]
+	  },
+
+	  "continents_comp": {
+		"prefix": "continents_comp",
+		"description": "continents_comp",
+		"body": [
+		  "<script>",
+		  "    import { onMount } from \"svelte\";",
+		  "    ",
+		  "    // define the data holding variable",
+		  "    let continents;",
+		  "",
+		  "    onMount(async () => {        ",
+		  "        await fetch(`continents.json`)",
+		  "            .then((r) => r.json())",
+		  "            .then((data) => {                ",
+		  "                continents = data;",
+		  "            });",
+		  "    });",
+		  "</script>",
+		  "",
+		  "<main>",
+		  "    <h1>",
+		  "        https://blog.logrocket.com/consuming-rest-apis-in-svelte/",
+		  "    </h1>",
+		  "    {#if continents}",
+		  "        {#each continents as continent}",
+		  "            <ul>",
+		  "                <li>                    ",
+		  "                </li>",
+		  "            </ul>",
+		  "        {/each}",
+		  "    {:else}",
+		  "        <p class=\"loading\">loading...</p>",
+		  "    {/if}",
+		  "</main>",
+		  "",
+		  "",
+		  ""
+		]
+	  },
+	  "form_input_comp": {
+		"prefix": "form_input_comp",
+		"description": "form_input_comp",
+		"body": [
+		  "<script> ",
+		  "</script>",
+		  "",
+		  "<p class=\"caption\">:</p>",
+		  "<input ",
+		  "    class=\"inp\" type=\"text\" ",
+		  "/>",
+		  "",
+		  "<style>",
+		  "    .caption {",
+		  "        font-size: 34px;        ",
+		  "        margin-bottom: 4px;",
+		  "    }",
+		  "    .inp {             ",
+		  "        margin-bottom: 4px;",
+		  "    }",
+		  "    .subcaption {",
+		  "        font-size: 12px;        ",
+		  "        margin-top: 0px;",
+		  "        padding-top: 0px;",
+		  "    }",
+		  "</style>",
+		  "",
+		  "",
+		  ""
+		]
+	  },
+	  "form_comp": {
+		"prefix": "form_comp",
+		"description": "form_comp",
+		"body": [
+		  "<script> ",
+		  "    import {navn, adresse} from \"../../stores/person.js\";	",
+		  "",
+		  "    let _navn",
+		  "    navn.subscribe(value => _navn = value)",
+		  "       function lagre() {",
+		  "        console.log(\"Lagrer form i global state\")",
+		  "        navn.update((n) => _navn)        ",
+		  "    }",
+		  "",
+		  "    //$: nameUpper = navn.toUpperCase()",
+		  "</script>",
+		  "",
+		  "<FormInput ",
+		  "    overskrift=\"Oppgi navn.\" ",
+		  "/>",
+		  "",
+		  "",
+		  ""
+		]
+	  },
+	  "person_store": {
+		"prefix": "person_store",
+		"description": "person_store",
+		"body": [
+		  "import { writable } from 'svelte/store';",
+		  "",
+		  "export const navn = writable(\"$1\");",
+		  "export const adresse = writable(\"$2\");"
+		]
+	  }
+}

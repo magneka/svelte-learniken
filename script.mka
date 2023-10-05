@@ -1,4 +1,5 @@
 Sjekk ut prosjekt
+Installer Svelte for VS Code extension
 
 Lag folder src\layout
 lag filene
@@ -28,5 +29,67 @@ Footer svelte
 
 HeaderMenu.svelte
 bruk snippet headermenu_initial
+
+Legg inn 
+div med class grid_layout
+inni 5 diver med class "box "
+Legg så inn Logo, HeaderMenu, Content og Footer
+Du får auto importer
+
+Fremdeles ser alt likt ut.
+
+Nå må vi lage en ny Content.svelte
+bruk snippet content_initial
+
+Nå kan vi rette main.js til å peke på den rette 
+app.svelte
+
+Ser skjermbildet rett ut nå?
+Da kan vi lage den første komponenten:
+routes\home\Home.svelte
+bruk snippet home_svelte
+
+Hvordan skal vi vise denne:
+1. i Content.svelte
+<Route path="/" component={Home} />
+<Route path="*" component={Home} />
+
+2. i Headermenu.svelte
+<Link to="/">Home</Link>
+
+Neste komponent blir en teller 
+let count lager lokal state
+bruk snippets for button_click, og input_bind
+vi kan binde verdien til count
+Vi kan lage anonyme lambdas i button for å øke/minke
+
+Deretter CountGlobal
+Nå skal vi ha global state (a.la redux/rx.js)
+Folder /stores lag counter.js (merk extension)
+
+To linjer:
+import { writable } from 'svelte/store';
+export const count = writable(0);
+
+Så kan vi lage CountGlobal.svelte
+importer {count}
+lag lokal variabel count_value
+lag count.subscribe()
+
+tilbake til CountGlobal.svelte
+importer store
+import {count} from "../../stores/counter.js";		
+lokal variabel
+bruk snippet count_subscripe
+den blir kjørt hver gang verdien i store endres
+bruk input_bind til å koble en input til lokal variabel
+
+Vi skal lage knapper i en separat file for å demonstrere
+at store er global
+lag CountGlobalButtons.svelte
+bruk snitppet CountGlobalButtons
+lag ferdig de to andre decr og tøm
+
+
 
 
