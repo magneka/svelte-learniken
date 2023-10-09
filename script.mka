@@ -64,7 +64,7 @@ vi kan binde verdien til count
 Vi kan lage anonyme lambdas i button for å øke/minke
 
 Deretter CountGlobal
-Nå skal vi ha global state (a.la redux/rx.js)
+Nå skal vi ha global state (a.la redurx.js)
 Folder /stores lag counter.js (merk extension)
 
 To linjer:
